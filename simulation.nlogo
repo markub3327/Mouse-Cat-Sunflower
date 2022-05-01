@@ -241,7 +241,7 @@ cat-reproduce
 cat-reproduce
 0
 100
-1.0
+76.0
 1
 1
 %
@@ -256,7 +256,7 @@ gain-from-mouse
 gain-from-mouse
 0
 250
-50.0
+250.0
 1
 1
 NIL
@@ -271,7 +271,7 @@ mouse-reproduce
 mouse-reproduce
 0
 100
-1.0
+76.0
 1
 1
 %
@@ -339,7 +339,7 @@ gain-from-sunflower
 gain-from-sunflower
 0
 250
-200.0
+250.0
 1
 1
 NIL
@@ -365,7 +365,7 @@ init-mouses
 init-mouses
 0
 250
-50.0
+150.0
 1
 1
 NIL
@@ -380,7 +380,7 @@ init-cats
 init-cats
 0
 250
-50.0
+250.0
 1
 1
 NIL
@@ -395,7 +395,7 @@ init-sunflowers
 init-sunflowers
 0
 250
-50.0
+250.0
 1
 1
 NIL
@@ -425,7 +425,7 @@ sunflower-regrowth-time
 sunflower-regrowth-time
 0
 250
-1.0
+76.0
 1
 1
 NIL
@@ -909,13 +909,16 @@ NetLogo 6.2.2
     <setup>setup</setup>
     <go>go</go>
     <timeLimit steps="5000"/>
-    <steppedValueSet variable="mouse-reproduce" first="1" step="25" last="101"/>
+    <metric>count mouses</metric>
+    <metric>count cats</metric>
+    <metric>count sunflowers</metric>
+    <steppedValueSet variable="mouse-reproduce" first="16" step="16" last="64"/>
     <steppedValueSet variable="init-sunflowers" first="0" step="50" last="250"/>
     <steppedValueSet variable="gain-from-mouse" first="0" step="50" last="250"/>
-    <steppedValueSet variable="cat-reproduce" first="1" step="25" last="101"/>
-    <steppedValueSet variable="init-cats" first="0" step="50" last="250"/>
+    <steppedValueSet variable="cat-reproduce" first="8" step="8" last="32"/>
+    <steppedValueSet variable="init-cats" first="0" step="50" last="150"/>
     <steppedValueSet variable="gain-from-sunflower" first="0" step="50" last="250"/>
-    <steppedValueSet variable="sunflower-regrowth-time" first="1" step="25" last="101"/>
+    <steppedValueSet variable="sunflower-regrowth-time" first="25" step="25" last="250"/>
     <steppedValueSet variable="init-mouses" first="0" step="50" last="250"/>
     <enumeratedValueSet variable="max-cats">
       <value value="30000"/>
