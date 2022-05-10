@@ -5,7 +5,7 @@ import seaborn as sns
 from sklearn.ensemble import RandomForestRegressor
 
 data = pd.read_csv(
-    'results/find-optimum-spreadsheet_2.csv',
+    'results/find-optimum-spreadsheet.csv',
     index_col=0,
     sep=',',
     quotechar='"',
@@ -27,9 +27,9 @@ init_mouses = np.array(data.loc[:, 'init-mouses'], dtype=np.int32)
 mouse_reproduce = np.array(data.loc[:, 'mouse-reproduce'], dtype=np.int32)
 gain_from_sunflower = np.array(data.loc[:, 'gain-from-sunflower'], dtype=np.int32)
 steps = np.array(data.loc[:, '[steps]'], dtype=np.int32)
-count_mouses = np.array(data.loc[:, 'count-mouses'], dtype=np.int32)
-count_cats = np.array(data.loc[:, 'count-cats'], dtype=np.int32)
-count_sunflowers = np.array(data.loc[:, 'count-sunflowers'], dtype=np.int32)
+#count_mouses = np.array(data.loc[:, 'count-mouses'], dtype=np.int32)
+#count_cats = np.array(data.loc[:, 'count-cats'], dtype=np.int32)
+#count_sunflowers = np.array(data.loc[:, 'count-sunflowers'], dtype=np.int32)
 
 # Get correlations
 corr = []
@@ -119,12 +119,12 @@ ax.set_ylabel('Count')
 ax.set_title('Distribution of steps')
 
 # Mouse-Cat-Sunflower 3D space
-ax = fig.add_subplot(figsize=(8, 6), projection='3d')
-ax.plot3D(count_mouses, count_cats, count_sunflowers)
-ax.set_xlabel('Mouses')
-ax.set_ylabel('Cats')
-ax.set_zlabel('Sunflowers')
-ax.set_title('Mouse-Cat-Sunflower 3D space')
+#ax = fig.add_subplot(figsize=(8, 6), projection='3d')
+#ax.plot3D(count_mouses, count_cats, count_sunflowers)
+#ax.set_xlabel('Mouses')
+#ax.set_ylabel('Cats')
+#ax.set_zlabel('Sunflowers')
+#ax.set_title('Mouse-Cat-Sunflower 3D space')
 
 # show plots
 plt.show()
